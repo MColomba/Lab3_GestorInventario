@@ -28,6 +28,10 @@ namespace GestorInventario
             }
 
         }
+        public void CloseConnection()
+        {
+            this.objConnection.Close();
+        }
         public SqlConnection GetConnection()
         {
             return objConnection;

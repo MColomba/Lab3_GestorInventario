@@ -120,6 +120,7 @@ namespace GestorInventario
             {
                 MessageBox.Show(objConnection.GetError(), "Error al conectar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            objConnection.CloseConnection();
         }
         public void AbrirModificar(int Codigo)
         {
@@ -153,6 +154,7 @@ namespace GestorInventario
             {
                 MessageBox.Show(objConnection.GetError(), "Error al conectar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            objConnection.CloseConnection();
         }
         public void CargarCmbCategorias()
         {
@@ -182,6 +184,7 @@ namespace GestorInventario
             {
                 MessageBox.Show(objConnection.GetError(), "Error al conectar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            objConnection.CloseConnection();
         }
 
         //Buttons
@@ -221,6 +224,7 @@ namespace GestorInventario
                 {
                     MessageBox.Show(objConnection.GetError(), "Error al conectar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                objConnection.CloseConnection();
             }
             else
             {
@@ -253,6 +257,7 @@ namespace GestorInventario
                     {
                         MessageBox.Show(objConnection.GetError(), "Error al conectar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    objConnection.CloseConnection();
                 }
             }
         }

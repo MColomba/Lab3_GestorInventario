@@ -101,6 +101,7 @@ namespace GestorInventario
             {
                 MessageBox.Show(objConnection.GetError(), "Error al conectar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            objConnection.CloseConnection();
         }
         public void ActualizarListadoNombre()
         {
@@ -134,6 +135,7 @@ namespace GestorInventario
             {
                 MessageBox.Show(objConnection.GetError(), "Error al conectar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            objConnection.CloseConnection();
         }
         public void ActualizarListadoCodigo()
         {
@@ -167,6 +169,7 @@ namespace GestorInventario
             {
                 MessageBox.Show(objConnection.GetError(), "Error al conectar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            objConnection.CloseConnection();
         }
         public void ActualizarListadoCategoria()
         {
@@ -200,6 +203,7 @@ namespace GestorInventario
             {
                 MessageBox.Show(objConnection.GetError(),"Error al conectar",MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            objConnection.CloseConnection();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -283,6 +287,7 @@ namespace GestorInventario
             {
                 MessageBox.Show(objConnection.GetError(), "Error al conectar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            objConnection.CloseConnection();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
