@@ -25,8 +25,8 @@ namespace GestorInventario
             catch (Exception ex)
             {
                 strError = "Error al conectar con la base de datos: " + ex.Message;
-                this.CloseConnection();
             }
+
         }
         public void CloseConnection()
         {
