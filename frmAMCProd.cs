@@ -31,7 +31,7 @@ namespace GestorInventario
                     btnGrabar.Visible = false;
                     txtCodigo.Enabled = false;
                     txtNombre.Enabled = false;
-                    txtDescripcion.Enabled = false;
+                    rtbDescripcion.Enabled = false;
                     txtPrecio.Enabled = false;
                     txtStock.Enabled = false;
                     cmbCategoria.Enabled = false;
@@ -66,7 +66,7 @@ namespace GestorInventario
                 MessageBox.Show("Faltan completar el nombre", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 validado = false;
             }
-            if (txtDescripcion.Text == "")
+            if (rtbDescripcion.Text == "")
             {
                 MessageBox.Show("Faltan completar la descripcion", "Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 validado = false;
@@ -104,7 +104,7 @@ namespace GestorInventario
                         {
                             txtCodigo.Text = reader["Codigo"].ToString();
                             txtNombre.Text = reader["Nombre"].ToString();
-                            txtDescripcion.Text = reader["Descripcion"].ToString();
+                            rtbDescripcion.Text = reader["Descripcion"].ToString();
                             txtPrecio.Text = reader["Precio"].ToString();
                             txtStock.Text = reader["Stock"].ToString();
                             cmbCategoria.SelectedIndex = Convert.ToInt32(reader["CategoriaId"]) - 1;
@@ -138,7 +138,7 @@ namespace GestorInventario
                         {
                             txtCodigo.Text = reader["Codigo"].ToString();
                             txtNombre.Text = reader["Nombre"].ToString();
-                            txtDescripcion.Text = reader["Descripcion"].ToString();
+                            rtbDescripcion.Text = reader["Descripcion"].ToString();
                             txtPrecio.Text = reader["Precio"].ToString();
                             txtStock.Text = reader["Stock"].ToString();
                             cmbCategoria.SelectedIndex = Convert.ToInt32(reader["CategoriaId"]) - 1;
@@ -206,7 +206,7 @@ namespace GestorInventario
 
                         SqlCommand objCommand = new SqlCommand(strQuery, objConnection.GetConnection());
                         objCommand.Parameters.AddWithValue("@nombre", txtNombre.Text);
-                        objCommand.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
+                        objCommand.Parameters.AddWithValue("@descripcion", rtbDescripcion.Text);
                         objCommand.Parameters.AddWithValue("@precio", Convert.ToDecimal(txtPrecio.Text));
                         objCommand.Parameters.AddWithValue("@stock", Convert.ToInt32(txtStock.Text));
                         objCommand.Parameters.AddWithValue("@categoriaId", Convert.ToInt32(cmbCategoria.SelectedIndex) + 1);
@@ -239,7 +239,7 @@ namespace GestorInventario
                             SqlCommand objCommand = new SqlCommand(strQuery, objConnection.GetConnection());
                             objCommand.Parameters.AddWithValue("@codigo", Convert.ToInt32(txtCodigo.Text));
                             objCommand.Parameters.AddWithValue("@nombre", txtNombre.Text);
-                            objCommand.Parameters.AddWithValue("@descripcion", txtDescripcion.Text);
+                            objCommand.Parameters.AddWithValue("@descripcion", rtbDescripcion.Text);
                             objCommand.Parameters.AddWithValue("@precio", Convert.ToDecimal(txtPrecio.Text));
                             objCommand.Parameters.AddWithValue("@stock", Convert.ToInt32(txtStock.Text));
                             objCommand.Parameters.AddWithValue("@categoriaId", Convert.ToInt32(cmbCategoria.SelectedIndex) + 1);
