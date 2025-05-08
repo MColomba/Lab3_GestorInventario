@@ -233,8 +233,8 @@ namespace GestorInventario
         {
             try
             {
-                frmAMCProd frmConsulta = new frmAMCProd();
-                frmConsulta.Abrir(1, 0);
+                frmAMCProd frmAgregar = new frmAMCProd();
+                frmAgregar.Abrir(1, 0);
                 ActualizarListado(0);
             }
             catch (Exception ex)
@@ -249,8 +249,8 @@ namespace GestorInventario
             {
                 int Codigo = Convert.ToInt32(dgv.SelectedRows[0].Cells[0].Value.ToString());
 
-                frmAMCProd frmConsulta = new frmAMCProd();
-                frmConsulta.Abrir(2, Codigo);
+                frmAMCProd frmModificar = new frmAMCProd();
+                frmModificar.Abrir(2, Codigo);
                 ActualizarListado(0);
             }
             catch (Exception ex)
